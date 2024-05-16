@@ -1,64 +1,73 @@
+namespace SpriteKind {
+    export const Title = SpriteKind.create()
+}
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    Granny.setImage(img`
-        . . . . . f f f f f . . . . . . 
-        . . . . f b b b b b f . . . . . 
-        . . . f b b b b b b b f . . . . 
-        . . f b b f f f f f f f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . f b f d f d d f d f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . . f f d d d d d f . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . f 8 8 8 8 8 8 f . . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . d f f f f f f f f d . . . . 
-        . . . . f . . . . f e e e e e . 
-        . . . . f . . . . f . . . . e . 
-        . . . . . . . . . . . . . . . . 
-        `)
-    animation.runImageAnimation(
-    Granny,
-    [img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f . . . . . . 
-        . . . . f b b b b b f . . . . . 
-        . . . f b b b b b b b f . . . . 
-        . . f b b f f f f f f f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . f b f d f d d f d f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . . f f d d d d d f . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . f 8 8 8 8 8 8 f . . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . d f f f f f f f f d . . . . 
-        . . . . f . . . . f e e e e e . 
-        . . . . f . . . . f . . . . e . 
-        . . . . . . . . . . . . . . . . 
-        `,img`
-        . . . . . f f f f f . . . . . . 
-        . . . . f b b b b b f . . . . . 
-        . . . f b b b b b b b f . . . . 
-        . . f b b f f f f f f f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . f b f d f d d f d f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . . f f d d d d d f . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . f 8 8 8 8 8 8 f . . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . d f f f f f f f f d . . . . 
-        . . . . f . . . . f e e e e e . 
-        . . . . f . . . . f . . . . e . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `],
-    200,
-    true
-    )
+    if (GameStart == 1) {
+        Granny.setImage(img`
+            . . . . . f f f f f . . . . . . 
+            . . . . f b b b b b f . . . . . 
+            . . . f b b b b b b b f . . . . 
+            . . f b b f f f f f f f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . f b f d f d d f d f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . . f f d d d d d f . . . . . 
+            . . . . f f f f f f . . . . . . 
+            . . . f 8 8 8 8 8 8 f . . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . d f f f f f f f f d . . . . 
+            . . . . f . . . . f e e e e e . 
+            . . . . f . . . . f . . . . e . 
+            . . . . . . . . . . . . . . . . 
+            `)
+        animation.runImageAnimation(
+        Granny,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . f f f f f . . . . . . 
+            . . . . f b b b b b f . . . . . 
+            . . . f b b b b b b b f . . . . 
+            . . f b b f f f f f f f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . f b f d f d d f d f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . . f f d d d d d f . . . . . 
+            . . . . f f f f f f . . . . . . 
+            . . . f 8 8 8 8 8 8 f . . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . d f f f f f f f f d . . . . 
+            . . . . f . . . . f e e e e e . 
+            . . . . f . . . . f . . . . e . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . f f f f f . . . . . . 
+            . . . . f b b b b b f . . . . . 
+            . . . f b b b b b b b f . . . . 
+            . . f b b f f f f f f f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . f b f d f d d f d f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . . f f d d d d d f . . . . . 
+            . . . . f f f f f f . . . . . . 
+            . . . f 8 8 8 8 8 8 f . . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . d f f f f f f f f d . . . . 
+            . . . . f . . . . f e e e e e . 
+            . . . . f . . . . f . . . . e . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
+    Dungeon1floor += 1
+    tiles.placeOnTile(Granny, tiles.getTileLocation(2, 12))
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (GameStart == 0) {
@@ -66,66 +75,68 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    Granny.setImage(img`
-        . . . . . . f f f f f . . . . . 
-        . . . . . f b b b b b f . . . . 
-        . . . . f b b b b b b b f . . . 
-        . . . . f f f f f f f b b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . f d f d d f d f b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . . f d d d d d f f . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . f 8 8 8 8 8 8 f . . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . d f f f f f f f f d . . 
-        . e e e e e f . . . . f . . . . 
-        . e . . . . f . . . . f . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
-    animation.runImageAnimation(
-    Granny,
-    [img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f . . . . . 
-        . . . . . f b b b b b f . . . . 
-        . . . . f b b b b b b b f . . . 
-        . . . . f f f f f f f b b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . f d f d d f d f b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . . f d d d d d f f . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . f 8 8 8 8 8 8 f . . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . d f f f f f f f f d . . 
-        . e e e e e f . . . . f . . . . 
-        . e . . . . f . . . . f . . . . 
-        . . . . . . . . . . . . . . . . 
-        `,img`
-        . . . . . . f f f f f . . . . . 
-        . . . . . f b b b b b f . . . . 
-        . . . . f b b b b b b b f . . . 
-        . . . . f f f f f f f b b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . f d f d d f d f b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . . f d d d d d f f . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . f 8 8 8 8 8 8 f . . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . d f f f f f f f f d . . 
-        . e e e e e f . . . . f . . . . 
-        . e . . . . f . . . . f . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `],
-    200,
-    true
-    )
+    if (GameStart == 1) {
+        Granny.setImage(img`
+            . . . . . . f f f f f . . . . . 
+            . . . . . f b b b b b f . . . . 
+            . . . . f b b b b b b b f . . . 
+            . . . . f f f f f f f b b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . f d f d d f d f b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . . f d d d d d f f . . . 
+            . . . . . . f f f f f f . . . . 
+            . . . . . f 8 8 8 8 8 8 f . . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . d f f f f f f f f d . . 
+            . e e e e e f . . . . f . . . . 
+            . e . . . . f . . . . f . . . . 
+            . . . . . . . . . . . . . . . . 
+            `)
+        animation.runImageAnimation(
+        Granny,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f f . . . . . 
+            . . . . . f b b b b b f . . . . 
+            . . . . f b b b b b b b f . . . 
+            . . . . f f f f f f f b b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . f d f d d f d f b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . . f d d d d d f f . . . 
+            . . . . . . f f f f f f . . . . 
+            . . . . . f 8 8 8 8 8 8 f . . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . d f f f f f f f f d . . 
+            . e e e e e f . . . . f . . . . 
+            . e . . . . f . . . . f . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . f f f f f . . . . . 
+            . . . . . f b b b b b f . . . . 
+            . . . . f b b b b b b b f . . . 
+            . . . . f f f f f f f b b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . f d f d d f d f b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . . f d d d d d f f . . . 
+            . . . . . . f f f f f f . . . . 
+            . . . . . f 8 8 8 8 8 8 f . . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . d f f f f f f f f d . . 
+            . e e e e e f . . . . f . . . . 
+            . e . . . . f . . . . f . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
 })
 function StartTheFrigginGame () {
     GameStart = 1
@@ -147,134 +158,264 @@ function StartTheFrigginGame () {
         . . . . f . . . . f . . . . e . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Player)
-    controller.moveSprite(Granny)
+    controller.moveSprite(Granny, 100, 100)
+    scene.cameraFollowSprite(Granny)
+    scene.setBackgroundImage(img`
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        `)
+    tiles.setCurrentTilemap(tilemap`level2`)
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    Granny.setImage(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f . . . . . . 
-        . . . . f b b b b b f . . . . . 
-        . . . f b b b b b b b f . . . . 
-        . . f b b f f f f f f f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . f b f d f d d f d f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . . f f d d d d d f . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . f 8 8 8 8 8 8 f . . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . d f f f f f f f f d . . . . 
-        . . . . f . . . . f e e e e e . 
-        . . . . f . . . . f . . . . e . 
-        `)
-    animation.runImageAnimation(
-    Granny,
-    [img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . f f f f f . . . . . . 
-        . . . . f b b b b b f . . . . . 
-        . . . f b b b b b b b f . . . . 
-        . . f b b f f f f f f f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . f b f d f d d f d f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . . f f d d d d d f . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . f 8 8 8 8 8 8 f . . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . d f f f f f f f f d . . . . 
-        . . . . f . . . . f e e e e e . 
-        . . . . f . . . . f . . . . e . 
-        . . . . . . . . . . . . . . . . 
-        `,img`
-        . . . . . f f f f f . . . . . . 
-        . . . . f b b b b b f . . . . . 
-        . . . f b b b b b b b f . . . . 
-        . . f b b f f f f f f f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . f b f d f d d f d f . . . . 
-        . . f b f d d d d d d f . . . . 
-        . . . f f d d d d d f . . . . . 
-        . . . . f f f f f f . . . . . . 
-        . . . f 8 8 8 8 8 8 f . . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . f 8 8 8 8 8 8 8 8 f . . . . 
-        . . d f f f f f f f f d . . . . 
-        . . . . f . . . . f e e e e e . 
-        . . . . f . . . . f . . . . e . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `],
-    200,
-    true
-    )
+    if (GameStart == 1) {
+        Granny.setImage(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . f f f f f . . . . . . 
+            . . . . f b b b b b f . . . . . 
+            . . . f b b b b b b b f . . . . 
+            . . f b b f f f f f f f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . f b f d f d d f d f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . . f f d d d d d f . . . . . 
+            . . . . f f f f f f . . . . . . 
+            . . . f 8 8 8 8 8 8 f . . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . d f f f f f f f f d . . . . 
+            . . . . f . . . . f e e e e e . 
+            . . . . f . . . . f . . . . e . 
+            `)
+        animation.runImageAnimation(
+        Granny,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . f f f f f . . . . . . 
+            . . . . f b b b b b f . . . . . 
+            . . . f b b b b b b b f . . . . 
+            . . f b b f f f f f f f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . f b f d f d d f d f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . . f f d d d d d f . . . . . 
+            . . . . f f f f f f . . . . . . 
+            . . . f 8 8 8 8 8 8 f . . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . d f f f f f f f f d . . . . 
+            . . . . f . . . . f e e e e e . 
+            . . . . f . . . . f . . . . e . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . f f f f f . . . . . . 
+            . . . . f b b b b b f . . . . . 
+            . . . f b b b b b b b f . . . . 
+            . . f b b f f f f f f f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . f b f d f d d f d f . . . . 
+            . . f b f d d d d d d f . . . . 
+            . . . f f d d d d d f . . . . . 
+            . . . . f f f f f f . . . . . . 
+            . . . f 8 8 8 8 8 8 f . . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . f 8 8 8 8 8 8 8 8 f . . . . 
+            . . d f f f f f f f f d . . . . 
+            . . . . f . . . . f e e e e e . 
+            . . . . f . . . . f . . . . e . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-    Granny.setImage(img`
-        . . . . . . f f f f f . . . . . 
-        . . . . . f b b b b b f . . . . 
-        . . . . f b b b b b b b f . . . 
-        . . . . f f f f f f f b b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . f d f d d f d f b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . . f d d d d d f f . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . f 8 8 8 8 8 8 f . . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . d f f f f f f f f d . . 
-        . e e e e e f . . . . f . . . . 
-        . e . . . . f . . . . f . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
-    animation.runImageAnimation(
-    Granny,
-    [img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f . . . . . 
-        . . . . . f b b b b b f . . . . 
-        . . . . f b b b b b b b f . . . 
-        . . . . f f f f f f f b b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . f d f d d f d f b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . . f d d d d d f f . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . f 8 8 8 8 8 8 f . . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . d f f f f f f f f d . . 
-        . e e e e e f . . . . f . . . . 
-        . e . . . . f . . . . f . . . . 
-        . . . . . . . . . . . . . . . . 
-        `,img`
-        . . . . . . f f f f f . . . . . 
-        . . . . . f b b b b b f . . . . 
-        . . . . f b b b b b b b f . . . 
-        . . . . f f f f f f f b b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . f d f d d f d f b f . . 
-        . . . . f d d d d d d f b f . . 
-        . . . . . f d d d d d f f . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . f 8 8 8 8 8 8 f . . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . f 8 8 8 8 8 8 8 8 f . . 
-        . . . . d f f f f f f f f d . . 
-        . e e e e e f . . . . f . . . . 
-        . e . . . . f . . . . f . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `],
-    200,
-    true
-    )
+    if (GameStart == 1) {
+        Granny.setImage(img`
+            . . . . . . f f f f f . . . . . 
+            . . . . . f b b b b b f . . . . 
+            . . . . f b b b b b b b f . . . 
+            . . . . f f f f f f f b b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . f d f d d f d f b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . . f d d d d d f f . . . 
+            . . . . . . f f f f f f . . . . 
+            . . . . . f 8 8 8 8 8 8 f . . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . d f f f f f f f f d . . 
+            . e e e e e f . . . . f . . . . 
+            . e . . . . f . . . . f . . . . 
+            . . . . . . . . . . . . . . . . 
+            `)
+        animation.runImageAnimation(
+        Granny,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f f . . . . . 
+            . . . . . f b b b b b f . . . . 
+            . . . . f b b b b b b b f . . . 
+            . . . . f f f f f f f b b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . f d f d d f d f b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . . f d d d d d f f . . . 
+            . . . . . . f f f f f f . . . . 
+            . . . . . f 8 8 8 8 8 8 f . . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . d f f f f f f f f d . . 
+            . e e e e e f . . . . f . . . . 
+            . e . . . . f . . . . f . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . f f f f f . . . . . 
+            . . . . . f b b b b b f . . . . 
+            . . . . f b b b b b b b f . . . 
+            . . . . f f f f f f f b b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . f d f d d f d f b f . . 
+            . . . . f d d d d d d f b f . . 
+            . . . . . f d d d d d f f . . . 
+            . . . . . . f f f f f f . . . . 
+            . . . . . f 8 8 8 8 8 8 f . . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . f 8 8 8 8 8 8 8 8 f . . 
+            . . . . d f f f f f f f f d . . 
+            . e e e e e f . . . . f . . . . 
+            . e . . . . f . . . . f . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
 })
+let Floor1: Sprite = null
 let Granny: Sprite = null
 let GameStart = 0
+let Dungeon1floor = 0
 GameStart = 0
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -398,3 +539,51 @@ scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     `)
+game.onUpdate(function () {
+    if (Dungeon1floor == 1) {
+        tiles.setCurrentTilemap(tilemap`level4`)
+        Floor1 = sprites.create(img`
+            ............................................................................................................................................
+            .111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.
+            ............................................................................................................................................
+            ............................................................................................................................................
+            ............................................................................................................................................
+            ...............111111111111...1..........111111...111111..1111111111........................................................................
+            ...............1..............1..........1....1...1....1..1........1........................................................................
+            ...............1..............1..........1....1...1....1..1........1.......................1111111..........................................
+            ...............1..............1..........1....1...1....1..1........1......................1......1..........................................
+            ...............1..............1..........1....1...1....1..1........1.....................1.......1..........................................
+            ...............1..............1..........1....1...1....1..1........1.....................1.......1..........................................
+            ...............1..............1..........1....1...1....1..1........1.............................1..........................................
+            ...............1..............1..........1....1...1....1..1........1.............................1..........................................
+            ...............1..............1..........1....1...1....1..1111111111.............................1..........................................
+            ...............111111111111...1..........1....1...1....1..11.....................................1..........................................
+            ...............1..............1..........1....1...1....1..11.....................................1..........................................
+            ...............1..............1..........1....1...1....1..1.1....................................1..........................................
+            ...............1..............1..........1....1...1....1..1.1....................................1..........................................
+            ...............1..............1..........1....1...1....1..1..1...................................1..........................................
+            ...............1..............1..........1....1...1....1..1...1..................................1..........................................
+            ...............1..............1..........1....1...1....1..1...1..................................1..........................................
+            ...............1..............1..........1....1...1....1..1....1.................................1..........................................
+            ...............1..............1..........1....1...1....1..1....1.................................1..........................................
+            ...............1..............1..........1....1...1....1..1.....1................................1..........................................
+            ...............1..............1..........1....1...1....1..1.....1................................1..........................................
+            ...............1..............1..........1....1...1....1..1......1...............................1..........................................
+            ...............1..............1..........1....1...1....1..1.......1..............................1..........................................
+            ...............1..............1..........1....1...1....1..1.......1..............................1..........................................
+            ...............1..............1..........1....1...1....1..1........1.............................1..........................................
+            ...............1..............1..........1....1...1....1..1........1.............................1..........................................
+            ...............1..............11111111...111111...111111..1.........1............................1..........................................
+            ..........................................................................................111111111111111...................................
+            ............................................................................................................................................
+            ............................................................................................................................................
+            ............................................................................................................................................
+            ............................................................................................................................................
+            ............................................................................................................................................
+            ............................................................................................................................................
+            .111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.
+            ............................................................................................................................................
+            `, SpriteKind.Title)
+        Floor1.setPosition(79, 26)
+    }
+})
